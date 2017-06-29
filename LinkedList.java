@@ -217,4 +217,33 @@ class LinkedList
         else
         return 1+count(ptr.next);
     } // count
+    
+    void createCircular()   // Creating a Linked List of integers from 1 to 5
+    {
+        Node ptr;
+        for(int i=1;i<=5;i++)
+        {
+            if(i==1)
+            start=ptr=new Node();
+            else
+            ptr=ptr.next;
+            ptr.info=i;
+            if(i==5)
+            ptr.next=start;
+            else 
+            ptr.next=new Node();
+        }
+    } // createCircular
+
+    void displayCircular()
+    {
+        Node ptr=start;
+        while(ptr!=start)
+        {
+            System.out.print(ptr.info+" ")
+            ptr=ptr.next;
+        }
+        System.out.println();
+    } // displayCircular
+
 }
