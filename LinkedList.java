@@ -126,7 +126,7 @@ class LinkedList
         return start2;  // Returning Starting node of new formed Linked List
     }
     
-    void reverse
+    void reverse()
     {
         Node ptr=null, pptr=start, nptr=start.next, start.next=null;
         while(nptr!=null)
